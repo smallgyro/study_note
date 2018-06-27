@@ -1,0 +1,9 @@
+C++ 冒号用法: https://blog.csdn.net/zimingjushi/article/details/6549390
+
+char *str: in c literals, they are arrays of chars, but in c++ literals, they are constant array of char.
+(reference: https://www.geeksforgeeks.org/char-vs-stdstring-vs-char-c/)
+char *str = "Hello, c++" will give out warning. ==> const char *str = "Hello, c++"
+
+从四行代码看右值引用：https://www.cnblogs.com/qicosmos/p/4283455.html
+
+问题：什么是带有堆内存的类？
