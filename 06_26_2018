@@ -66,7 +66,7 @@ Row-based database(SQL)/column-based database(Sybase)/K-V based database(Redis)
 
 SSTable：STL 库中map和hash_map, JAVA中hash_table, hash_map就是键值存储。 但是他们值只支持内存操作，而且map的查询效率太低，关键是他们只是简单的数据结构，不能实现较大规模存储和分布式,而且数据的修改效率比较低。 而SSTalbe就解决了这些问题。
 
-Take an SSTable, add a MemTable and apply a set of processing conventions and what you get is a nice database engine for certain type of workloads. In fact, Google's BigTable, Hadoop's HBase, and Cassandra amongst others are all using a variant or a direct copy of this very architecture.(Write放在MemTable里，read使用MemTable+disk的global index, MemTable到一定size时flushi into disk,有撤回时在MemTable上标记"tombstone"并在flush buffer时舍弃它)
+Take an SSTable, add a MemTable and apply a set of processing conventions and what you get is a nice database engine for certain type of workloads. In fact, Google's BigTable, Hadoop's HBase, and Cassandra amongst others are all using a variant or a direct copy of this very architecture.(Long structured storage: Write放在MemTable里，read使用MemTable+disk的global index, MemTable到一定size时flushi into disk,有撤回时在MemTable上标记"tombstone"并在flush buffer时舍弃它) https://www.igvita.com/2012/02/06/sstable-and-log-structured-storage-leveldb/
 
 Byte Array: b'\x01\x02\x03'
 
