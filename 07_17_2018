@@ -1,0 +1,5 @@
+Important python tricks:
+
+sum(1,0,1.....) is much faster than sum(True,False,True.......)
+(n-i)/i is much faster than len(lst[i:n:i])
+i**2 > x -> i>x/i to prevent int overflow
