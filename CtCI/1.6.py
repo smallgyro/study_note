@@ -15,6 +15,6 @@ def SCompress(s):
             count += 1
             i += 1
     ret = ret + start + str(count)
-    return ret
+    return ret if len(ret)<len(s) else s
 a = 'aabcccccaaa'
 SCompress(a)
