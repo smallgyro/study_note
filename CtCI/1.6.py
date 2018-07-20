@@ -1,3 +1,6 @@
+#be aware that StringBuild(), method of append, is O(n)
+#s += a could be O(n**2) in python, this problem was mitigated, but best practice is still [].append and ''.join([])
+
 def SCompress(s):
     if len(s) <= 2:
         return s
